@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Anagoge Podcast</title>
+  <style>
+    body {
+      text-align: center; 
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column; 
+      align-items: center; 
+      justify-content: center;
+    }
+
+    .logo img {
+      width: 210px; 
+      height: auto;
+      margin: 20px; 
+    }
+
+    .social-links {
+      display: flex; 
+      justify-content: center; 
+      padding-bottom: 20px; 
+    }
+
+    .social-links a img {
+      width: 70px;
+      margin: 0 10px;
+    }
+
+    .episode .title {
+      font-family: Arial, sans-serif; 
+      cursor: pointer;
+      background-color: #f7b810;
+      color: white;
+      padding: 10px;
+      width: 30%;
+      margin: auto;
+      margin-bottom: 20px;
+      height: auto;
+    }
+
+    .episode .content {
+      display: none;
+      padding: 10px;
+      width: 40%;
+      margin: auto;
+    }
+
+    .videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-top: 25px;
+    height: 0;
+    width: 70%; /* Desired width */
+    margin: 0 auto; /* Center the video */
+    }
+
+    .videoWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .episode .content {
+        display: none;
+        padding: 10px;
+        text-align: center; /* Center the text */
+    }
+
+
+    /* Mobile styles */
+    @media (max-width: 420px) {
+      /* Adjustable*/
+    }
+  </style>
+</head>
+<body>
+  <header> 
+    <div class="container"> 
+      <div class="logo"> 
+        <a href="/"> <img src="images/anagogelogo.png" alt="Logo"> </a> 
+      </div>
+      <div class="social-links"> 
+        <a href="https://podcasts.apple.com/si/podcast/anagoge-podcast/id1512482918?ign-mpt=uo%3D4"><img src="images/apple.png" alt="Apple Podcasts"></a>
+        <a href="https://open.spotify.com/show/4ifa95kknLrUQblYTUMQ7T"><img src="images/spotify.png" alt="Spotify"></a>
+        <a href="https://www.youtube.com/channel/UCH4eOgbF9-O_HSFx-oBOySw/"><img src="images/youtube.png" alt="YouTube"></a>
+        <a href="https://podcasts.google.com/?feed=aHR0cHM6Ly9hbmFnb2dlLmxpYnN5bi5jb20vcnNz/"><img src="images/google.png" alt="Google Podcasts"></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="episode">
+      <h2 class="title" data-episode-id="1">
+        <p>Learning & Teaching Philosophy</p>
+        <p>Gregory Sadler</p>
+      </h2>
+      <div class="content">
+        <div class="videoWrapper">
+          <iframe src="https://www.youtube.com/embed/gLwN0Cb3Zk8" title="Learning &amp; Teaching Philosophy - Gregory Sadler [Anagoge Podcast]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+
+        <div class="description">
+          <p>In this episode, I talk with Dr. Gregory Sadler, likely the most influential philosophy educator to exist. Sadler earned an M.A. and a Ph.D. in Philosophy from Southern Illinois University. He is the Founder of ReasonIO, a consulting company providing philosophy content, training, and consulting services. </p>
+
+          <p>He has reached impressive popularity on YouTube, and his channel has over 130.000 subscribers and 13 million views. He has helped me digest challenging thinkers with fantastic lectures explaining the main concepts while providing additional context and insights. His channel is an absolute gold mine for anyone interested in philosophy.  </p>
+
+          <p>We talk about the process of learning philosophy, the importance of good teachers, considerations about translated works, secondary literature, philosophical biases, truth, and much more. It was a very engaging conversation and one of my favorite episodes!</p>
+
+          <p>0:00 Start<br>
+          0:56 Introduction<br>
+          4:23 Sadler's expertise and background<br>
+          7:08 Sadler's journey in philosophy<br>
+          14:06 Being a good teacher<br>
+          18:46 Students from non-philosophical backgrounds<br>
+          21:02 Stoicism, Sartre, and Nietzsche in Sadler's philosophy views<br>
+          25:03 Importance of the original language in philosophical works<br>
+          38:08 Death of philosophy<br>
+          49:19 Trade-offs between primary and secondary literature<br>
+          59:29 Philosophical biases and autodidactism<br>
+          1:06:20 Intersection of truth in philosophy and religion</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    document.querySelectorAll('.episode .title').forEach((element) => {
+      element.addEventListener('click', function() {
+        if (this.nextElementSibling.style.display === '' || this.nextElementSibling.style.display === 'none') {
+          this.nextElementSibling.style.display = 'block';
+        } else {
+          this.nextElementSibling.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
